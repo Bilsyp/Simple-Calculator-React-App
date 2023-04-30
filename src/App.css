@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(45deg, skyblue, lightgreen);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  /* background: rgba(255, 255, 255, 0.75); */
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(7, minmax(80px, auto));
+  margin-top: 80px;
+}
+.output {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-size: 2em;
+  align-items: end;
+}
+.output .display {
+  color: rgba(255, 255, 255, 0.75);
+}
+.output .currentValue {
+  color: white;
+}
+.clear {
+  grid-column: span 2;
+}
+button {
+  background-color: slategrey;
+  font-size: 2em;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#equal {
+  grid-column: span 2;
+}
+#clear {
+  background-color: red;
+}
